@@ -1,0 +1,24 @@
+{
+  "name": "node-token-fetcher",
+  "description": "utility to create jwts and fetch installation tokens for ghe applications",
+  "repository": "https://github.com/jbharter/node-ghe-token-fetcher.git",
+  "author":"Jacob Harter <jacobharter@outlook.com>",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/jbharter/node-ghe-token-fetcher.git",
+    "email": "jacobharter@outlook.com"
+  },
+  "dependencies": {
+    "jsonwebtoken": "^8.2.1"
+  },
+  "config": {
+    "jwt": {
+      "pemfile": "/var/opt/secrets/private-key.pem",
+      "algo": "RS256"
+    },
+    "ghe": {
+      "hostname": "github.com",
+      "port": null
+    }
+  }
+}
