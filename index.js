@@ -1,3 +1,5 @@
+#!/usr/bin/env
+
 const jwt = require('jsonwebtoken');
 const fs = require('fs');
 const http = require("https");
