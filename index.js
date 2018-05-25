@@ -1,5 +1,4 @@
-#!/usr/bin/env
-
+#!/usr/bin/node
 const jwt = require('jsonwebtoken');
 const fs = require('fs');
 const http = require("https");
@@ -14,7 +13,7 @@ function newJWT() {
   let date = parseInt((new Date().getTime() / 1000).toFixed(0))
   return jwt.sign({
      iat: date,
-     exp: date + (10 /* 10 minute max */ * 60),
+     exp: date + (5 /* 10 minute max */ * 60),
      iss: 1
    }, cert, { algorithm: jwtConf.algo });
 }
