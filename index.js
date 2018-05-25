@@ -70,7 +70,7 @@ if (fetchNew) {
     let tokenResponse = JSON.parse(tok);
     if (tokenResponse.hasOwnProperty("token") && tokenResponse.hasOwnProperty("expires_at")) {
       configs['cache'] = { "installation": tokenResponse };
-      fs.writeFileSync("./package.json", JSON.stringify(configs, null, 2));
+      fs.writeFileSync("/usr/lib/node_modules/node-token-fetcher/package.json", JSON.stringify(configs, null, 2));
       console.log(tokenResponse.token);
     }
   })
